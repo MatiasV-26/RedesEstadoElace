@@ -55,11 +55,7 @@ public class Menu {
                             entrada.next();
                         }                        
                     }while(t);//Con los valores solicitados por teclado se realiza el Estado de enlace.
-                double timer = System.nanoTime();
                 Prueba.Dijkstra(CantRouters1,origen,MatCostos1); //Llamada a función Dijksta para mostrar el peso minimo del router de origen a los demás routers.
-                double t1 = System.nanoTime();
-                double res = (t1 - timer);
-                System.out.printf("%nTiempo total de ejecución: %f",res);
                 System.out.println("                                  ");
             } else if (opcion == 3) {
                 int m = 0;
@@ -106,11 +102,7 @@ public class Menu {
                             entrada.next();
                         }                        
                     }while(t);//Con los valores solicitados por teclado se realiza el Estado de enlace.
-                double timer = System.nanoTime();
-                Prueba.Dijkstra(CantRouters2,origen,MatCostos2); //Llamada a función Dijksta para mostrar el peso minimo del router de origen a los demás routers.
-                double t1 = System.nanoTime();
-                double res = (t1 - timer);
-                System.out.printf("%nTiempo total de ejecución: %f",res);
+                Prueba.Dijkstra(CantRouters2,origen,MatCostos2); //Llamada a función Dijksta para mostrar el peso minimo del router de origen a los demás routers.              
             } else {
                 puerta = 2;
             }

@@ -13,6 +13,7 @@ import java.util.*;
  */
 public class EstadoDeEnlace {
     public static void Dijkstra(int CantRouters,int Origen,int[][]MatCostos){
+        double timer = System.nanoTime();
         int dist[] = new int[CantRouters];//Se inicializa un arreglo que almacena las distancias de los Routers
         boolean Auxiliar[] = new boolean [CantRouters]; //Array auxiliar de tipo boolean.
         int PMin = 0; //Posición de Router que cuenta con el valor mínimo.
@@ -50,6 +51,9 @@ public class EstadoDeEnlace {
                 }
             }
         }
+        double t1 = System.nanoTime();
+        double res = (t1 - timer);
+        System.out.printf("%nTiempo total de ejecución: %f",res);
         for(int l = 0; l<CantRouters; l++){
             if(l != Origen){//Si el router es diferente del origen se imprime la distancia minima al origen.
                 System.out.println("Router de destino : "+l+"\t Costo Minimo : "+dist[l]+"\t");//se imprime la información de distancia
